@@ -1,0 +1,184 @@
+<script src="javascript.js"></script>
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Anime - Pokémon & One Piece</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-decorations">
+        <div class="pokeball"></div>
+        <div class="pirate-symbol">☠</div>
+    </div>
+
+    <main class="quiz-container">
+
+        <!-- ==========================================
+             TELA DE DIFICULDADE
+             ========================================== -->
+
+        <section id="difficulty-screen">
+
+            <div class="quiz-header">
+
+                <div class="logo-container">
+                    <h1>⚡ QUIZ ANIME ☠</h1>
+                    <p>Pokémon & One Piece</p>
+                </div>
+
+            </div>
+
+            <div class="question-card difficulty-card">
+
+                <h2>Escolha a dificuldade</h2>
+
+                <p class="difficulty-description">
+                    Escolha o nível para começar o desafio!
+                </p>
+
+                <div class="difficulty-container">
+
+                    <button
+                        type="button"
+                        class="difficulty-btn easy"
+                        data-difficulty="easy">
+
+                        🟢
+                        <span>Fácil</span>
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="difficulty-btn medium"
+                        data-difficulty="medium">
+
+                        🟡
+                        <span>Médio</span>
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="difficulty-btn hard"
+                        data-difficulty="hard">
+
+                        🔴
+                        <span>Difícil</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TELA DO QUIZ
+             ========================================== -->
+
+        <section id="quiz-screen" class="hidden">
+
+            <div class="quiz-header">
+
+                <div class="logo-container">
+                    <h1>⚡ QUIZ ANIME ☠</h1>
+                    <p>Pokémon & One Piece</p>
+                </div>
+
+                <div class="progress-container">
+
+                    <span id="progress-text">
+                        Pergunta 1 de 10
+                    </span>
+
+                    <div class="progress-bar">
+                        <div id="progress-fill"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <h2 id="question">
+                    Carregando pergunta...
+                </h2>
+
+                <div id="answers" class="answers-container">
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="next-btn"
+                class="next-btn">
+
+                Próxima →
+
+            </button>
+
+        </section>
+
+
+        <!-- ==========================================
+             TELA DE RESULTADO
+             ========================================== -->
+
+        <section id="result-screen" class="hidden">
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    🏆
+                </div>
+
+                <h2>Quiz Finalizado!</h2>
+
+                <p class="result-text">
+                    Sua pontuação:
+                </p>
+
+                <div id="score" class="score">
+                    0 / 10
+                </div>
+
+                <p id="result-message"></p>
+
+                <button
+                    type="button"
+                    id="restart-btn"
+                    class="restart-btn">
+
+                    🔄 Jogar Novamente
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- IMPORTANTE: o script fica no final do BODY -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
